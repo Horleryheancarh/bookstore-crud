@@ -1,0 +1,66 @@
+### Index
+GET http://localhost:5000/ HTTP/1.1
+
+### Create
+POST http://localhost:5000/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+Content-Type: application/json
+
+{
+    "title": "Angels And Demons",
+    "author": "Dan Brown",
+    "description": "CERN director Maximilian Kohler discovers one of the facility's top physicists, Leonardo Vetra, murdered, his chest branded with an ambigram of the word \"Illuminati.\" Kohler contacts Robert Langdon, an expert on symbology, who determines that the ambigram is authentic. Kohler calls Vetra's adopted daughter Vittoria home and it is ascertained that the Illuminati, an ancient anti-religious organization thought extinct, have stolen a canister containing antimatter, a substance with destructive potential comparable to a nuclear weapon. When at CERN, the canister is stored in a unique electrical charger which ensures the antimatter's stability, but when removed, its backup battery provides power for 24 hours, after which the antimatter would fall out of suspension and, on coming into contact with the physical matter of the container, explode. The canister is located somewhere in Vatican City, with a security camera in front of it, as its digital clock counts down to an explosion due to occur at midnight, which will wipe out the Vatican. Langdon is initially convinced that the Illuminati cannot be responsible for two reasons: 1) the Illuminati went extinct centuries ago, and their remnants were absorbed into the Freemasons and 2) the Illuminati, as men of scientific truth, would never sanction the murder of a fellow scientist. Kohler explains that Vetra might be an exception, as he was also an ordained Catholic priest.",
+    "category": "Fiction",
+    "purchaseCount": 70862,
+    "imageUrl": "/",
+    "tags": "",
+    "color": "#FB9100"
+}
+
+### Get All
+GET http://localhost:5000/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+
+### Get Single
+GET http://localhost:5000/books/61531acb2bd97e067c52e27d HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+
+
+### Update Single
+PUT http://localhost:5000/books/615317de2bd97e067c52e271 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+Content-Type: application/json
+
+{
+
+}
+
+### Delete Single
+DELETE http://localhost:5000/books/615317de2bd97e067c52e271 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+
+
+### Search
+GET http://localhost:5000/books?author=Dan Brown HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM3ZTRjNzk3MmU0Njk5M2QwNTc4OSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInVzZXJuYW1lIjoiam9kb2UiLCJyb2xlIjoicmVndWxhciIsImlhdCI6MTYzMjkxMDY5OSwiZXhwIjoxNjMyOTE0Mjk5fQ.E2W4lYSAcxMyNpRDV8-_kdLsfhSnYTZMM9qMkQYDNyU
+
+### Register User
+POST http://localhost:5000/user/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "username": "jadoe",
+    "password": "janedoe"
+}
+
+### Login User
+POST http://localhost:5000/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "jodoe",
+    "password": "johndoe"
+}
+
